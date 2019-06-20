@@ -59,6 +59,7 @@ def generate_3d_with_prnet():
 
 if __name__ == "__main__":
 
+    current_time = datetime.datetime.now()
     inputDir ='raw_images/'
     if args.inputDir :
         inputDir = args.inputDir
@@ -66,10 +67,10 @@ if __name__ == "__main__":
     if args.outputDir:
         outputDir = '../results/' + args.outputDir
 
-    print(str(datetime.datetime.now()))
+    print(str(current_time))
     encode_img_to_npy(inputDir)
-    print(str(datetime.datetime.now()))
+    print(str(current_time))
     generate_img_with_stylegan()
-    print(str(datetime.datetime.now()))
+    print(str(current_time))
     generate_3d_with_prnet()
-    print(str(datetime.datetime.now()))
+    print(str(current_time))
